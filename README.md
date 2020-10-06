@@ -33,9 +33,9 @@ try {
 ?>
 ```
 
-ConnectDatabase 
+SelectData 
 ------------
-#### (การเชื่อมต่อฐานข้อมูล)
+#### (การแสดงผลข้อมูล)
 ```php 
 <?php
     $sql = $pdo->prepare("SELECT * FROM news");
