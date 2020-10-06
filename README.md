@@ -9,14 +9,15 @@ FB:Thanadon Kongkanun [![Click](https://www.img.in.th/images/209839257f2c5439dbd
 * [ลบข้อมูล](#DeleteData)
 
 * [แสดงผลข้อมูล](#SelectData)
-===================
 
 
 
 
 
+
+InstallConnectDatabase (การเชื่อมต่อฐานข้อมูล)
 ------------
-ConnectDatabase 
+
 #### (การเชื่อมต่อฐานข้อมูล)
 ```php 
 <?php
