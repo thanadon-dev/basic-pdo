@@ -15,7 +15,7 @@ FB:Thanadon Kongkanun [![Click](https://www.img.in.th/images/209839257f2c5439dbd
 
 
 
-InstallConnectDatabase (การเชื่อมต่อฐานข้อมูล)
+ConnectDatabase (การเชื่อมต่อฐานข้อมูล)
 ------------
 
 #### (การเชื่อมต่อฐานข้อมูล)
