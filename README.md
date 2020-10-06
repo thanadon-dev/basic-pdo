@@ -1,8 +1,5 @@
-# basic-pdo
-Basic-PHP-PDO [![Build Status](https://www.facebook.com/markker.mtd/)](https://www.facebook.com/markker.mtd/)
+FB:Thanadon Kongkanun [![Click](https://www.facebook.com/markker.mtd/)](https://www.facebook.com/markker.mtd/)
 ===================
-#### FB:Thanadon Kongkanun (ติดต่องานทักแชท)
-
 นี่เป็นคำสั่งการใช้งาน PHP PDO เบื้องต้น ถ้าเป็นประโยชน์ให้กับใครก็สามารถที่จะแชร์ต่อกันได้นะครับผม
 
 * [การเชื่อมต่อฐานข้อมูล](#ConnectDatabase)
