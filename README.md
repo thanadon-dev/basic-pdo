@@ -4,16 +4,11 @@ FB:Thanadon Kongkanun [![Click](https://www.img.in.th/images/209839257f2c5439dbd
 
 * [การเชื่อมต่อฐานข้อมูล](#ConnectDatabase)
 
-* [เพิ่มข้อมูล](#AddData)
-
-* [ลบข้อมูล](#DeleteData)
-
 * [แสดงผลข้อมูล](#SelectData)
 
+* [เพิ่มข้อมูล มาเร็วๆนี้](#AddData)
 
-
-
-
+* [ลบข้อมูล มาเร็วๆนี้](#DeleteData)
 
 ConnectDatabase 
 ------------
@@ -36,3 +31,30 @@ try {
 }
 
 ?>
+```
+
+ConnectDatabase 
+------------
+#### (การเชื่อมต่อฐานข้อมูล)
+```php 
+<?php
+    $sql = $pdo->prepare("SELECT * FROM news");
+    $sql->execute();
+    $result = $sql->fetchAll();
+    foreach ($result as $row) {
+    ?>
+
+        <div class="col-md-4 p-3">
+            <div class="card">
+                <img src="<?php echo $row['images']; ?>" height="250" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h2><?php echo $row['title']; ?></h2>
+                    <p class="card-text"><?php echo $row['detail']; ?></p>
+                </div>
+            </div>
+        </div>
+
+    <?php
+    }
+    ?>
+```
