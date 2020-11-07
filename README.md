@@ -6,9 +6,8 @@ FB:Thanadon Kongkanun [![Click](https://www.img.in.th/images/209839257f2c5439dbd
 
 * [แสดงผลข้อมูล](#SelectData)
 
-* [เพิ่มข้อมูล มาเร็วๆนี้](#AddData)
+* [เพิ่มข้อมูล มาเร็วๆนี้](#Date)
 
-* [ลบข้อมูล มาเร็วๆนี้](#DeleteData)
 
 ConnectDatabase 
 ------------
@@ -57,4 +56,15 @@ SelectData
     <?php
     }
     ?>
+```
+
+Date
+------------
+#### เรื่องเวลา
+```php 
+//เซ็ตเวลาให้เป็นเวลาของประเทศไทย
+<?php date_default_timezone_set('Asia/Bangkok'); ?>
+
+// ปี-เดือน-วัน
+data(Y-m-d, H:i:s);
 ```
