@@ -62,9 +62,13 @@ Date
 ------------
 #### เรื่องเวลา
 ```php 
+<?php
+
 //เซ็ตเวลาให้เป็นเวลาของประเทศไทย
-<?php date_default_timezone_set('Asia/Bangkok'); ?>
+date_default_timezone_set('Asia/Bangkok'); 
 
 // ปี-เดือน-วัน
 data(Y-m-d, H:i:s);
+
+?>
 ```
