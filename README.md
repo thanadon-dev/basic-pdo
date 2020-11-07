@@ -6,7 +6,7 @@ FB:Thanadon Kongkanun [![Click](https://www.img.in.th/images/209839257f2c5439dbd
 
 * [แสดงผลข้อมูล](#SelectData)
 
-* [เพิ่มข้อมูล มาเร็วๆนี้](#Date)
+* [เรื่องวัน/เวลา](#Date)
 
 
 ConnectDatabase 
