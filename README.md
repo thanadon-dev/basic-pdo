@@ -8,7 +8,7 @@ FB:Thanadon Kongkanun [![Click](https://www.img.in.th/images/209839257f2c5439dbd
 
 * [เรื่องวัน/เวลา](#Date)
 
-* [เรื่องวัน/เวลา](#RandomString)
+* [สุ่มตัวอักษร](#RandomString)
 
 
 ConnectDatabase 
