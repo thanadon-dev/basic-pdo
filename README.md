@@ -12,6 +12,8 @@ FB:Thanadon Kongkanun [![Click](https://www.img.in.th/images/209839257f2c5439dbd
 
 * [คอนจ๊อบ(ตั้งเวลาให้ PHP ทำงานซ้าๆ)](#CronJob)
 
+* [ดึงข้อมูล JsonApi มาแสดงผล)](#SelectJsonApi)
+
 
 ConnectDatabase 
 ------------
@@ -135,5 +137,20 @@ while (true) {
 	sleep(3);
 }
 ?>
+```
+
+SelectJsonApi
+------------
+#### ดึงข้อมูล Json(API) มาแสดงผล
+```php 
+<?php
+
+ $jsondata = file_get_contents("https://jsonplaceholder.typicode.com/users");
+ $data = json_decode($jsondata, true);
+ print_r($data);
+
+?>
+```
+
 
 
