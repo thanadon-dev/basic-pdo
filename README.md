@@ -10,6 +10,8 @@ FB:Thanadon Kongkanun [![Click](https://www.img.in.th/images/209839257f2c5439dbd
 
 * [สุ่มตัวอักษร](#RandomString)
 
+* [คอนจ๊อบ(ตั้งเวลาให้ PHP ทำงานซ้าๆ)](#CronJob)
+
 
 ConnectDatabase 
 ------------
@@ -92,3 +94,29 @@ function rand_string($length)
     rand_string(5);
     ?>
 ```
+
+Cronjob
+------------
+#### CronJob คือวิธีตั้งเวลาให้ PHP ทำงานซ้ำๆ
+```php 
+<?php
+function httpGet($url)
+{
+    $ch = curl_init();  
+    curl_setopt($ch,CURLOPT_URL,$url);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+//  curl_setopt($ch,CURLOPT_HEADER, false); 
+    $output=curl_exec($ch);
+ 
+    curl_close($ch);
+    return $output;
+}
+while (true) {
+  $curl_content = httpGet("กรอกลิ้งที่ต้องการจะคอนจ๊อบลงตรงนี้เลย");
+	echo $curl_content;
+	echo "Markk <br>";
+	sleep(3);
+}
+?>
+
+
