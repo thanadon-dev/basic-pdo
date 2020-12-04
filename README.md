@@ -60,6 +60,23 @@ SelectData
     <?php
     }
     ?>
+    
+//2
+
+    <?php
+            foreach ($data as $row) {
+            ?>
+
+                <tr>
+                    <td><?php echo $row['id']; ?></td>
+                    <td><?php echo $row['name']; ?></td>
+                    <td><?php echo $row['username']; ?></td>
+                    <td>@<?php echo $row['email']; ?></td>
+                </tr>
+
+            <?php
+            }
+            ?>
 ```
 
 Date
