@@ -91,7 +91,8 @@ Date
 date_default_timezone_set('Asia/Bangkok'); 
 
 // ปี-เดือน-วัน
-data(Y-m-d, H:i:s);
+echo date('Y-m-d');
+echo date('H:i:s');
 
 ?>
 ```
