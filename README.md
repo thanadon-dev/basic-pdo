@@ -6,6 +6,8 @@ FB:Thanadon Kongkanun [![Click](https://www.img.in.th/images/209839257f2c5439dbd
 
 * [แสดงผลข้อมูล](#SelectData)
 
+* [เพิ่มข้อมูลลงฐานข้อมูล](#Insertdata)
+
 * [เรื่องวัน/เวลา](#Date)
 
 * [สุ่มตัวอักษร](#RandomString)
@@ -79,6 +81,19 @@ SelectData
             <?php
             }
             ?>
+```
+
+Insertdata
+------------
+#### เพิ่มข้อมูลลงฐานข้อมูล
+```php
+$insert = $pdo->prepare('INSERT INTO news (username, password)
+            VALUES (:username, :password)');
+
+            $insert->execute([
+                'username' => array,
+                'password' => array,
+            ]);
 ```
 
 Date
