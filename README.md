@@ -16,6 +16,8 @@ FB:Thanadon Kongkanun [![Click](https://www.img.in.th/images/209839257f2c5439dbd
 
 * [ดึงข้อมูล JsonApi มาแสดงผล)](#SelectJsonApi)
 
+* [การแรมดอมแบบคั้ง %)](#Randompercent)
+
 
 ConnectDatabase 
 ------------
@@ -168,5 +170,45 @@ SelectJsonApi
 ?>
 ```
 
+Randompercent
+------------
+#### การสุ่มแบบตั้ง %
+```php
+<?php
+// define options with chance weight
+$choices = [
+  'a' => 10.50,
+  'b' => 30,
+  'c' => 24.50,
+  'd' => 35,
+];
+
+$total = array_sum( $choices ); // total chance
+$percent = rand( 0, $total*100 ) / 100; // random chance with decimal point
+$award = null;
+$carry = 0;
+
+// loop through each option
+foreach ( $choices as $key => $value ) {
+  // calculate for floor/ceil value for current option
+  $high = $carry + $value;
+  $low = $carry;
+
+  // check if randomized $percent inside the threshold
+  if ( $percent > $low && $percent <= $high ) {
+    $award = $key;
+    
+    // value inside the threshold, break loop.
+    break;
+  }
+
+  // value outside the threshold, save next low value and continue.
+  $carry += $value;
+}
+
+// output
+echo "percent: {$percent}\n";
+echo "award: {$award}\n";
+```
 
 
