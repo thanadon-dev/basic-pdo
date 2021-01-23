@@ -16,7 +16,7 @@ FB:Thanadon Kongkanun [![Click](https://www.img.in.th/images/209839257f2c5439dbd
 
 * [ดึงข้อมูล JsonApi มาแสดงผล)](#SelectJsonApi)
 
-* [การแรมดอมแบบคั้ง %)](#Randompercent)
+* [การแรมดอมแบบตั้ง %)](#Randompercent)
 
 
 ConnectDatabase 
