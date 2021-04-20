@@ -18,6 +18,10 @@ FB:Thanadon Kongkanun [![Click](https://www.img.in.th/images/209839257f2c5439dbd
 
 * [การแรมดอมแบบตั้ง %](#Randompercent)
 
+* [แจ้งเตือนผ่านไลน์](#Linenotify)
+
+
+
 
 ConnectDatabase 
 ------------
@@ -211,4 +215,59 @@ echo "percent: {$percent}\n";
 echo "award: {$award}\n";
 ```
 
+Linenotify
+------------
+#### แจ้งเตือนผ่านไลน์
+```javascript
+// Start Notify
+            $header =  "\n" . "---------------" . "\n" . "รายการ : สุ่ม Wallet" . "\n" ."---------------";
+
+            $name = $user_username;
+            $c_message = "50 บาท";  // // c
+            $date = date('Y-m-d');
+            $time = date('H-i-s');
+
+
+            $message = $header .
+                "\n" . "ชื่อผู้ใช้ : " . $name .
+                "\n" . "สุ่มได้ : " . $c_message .
+                "\n" . "เมื่อวันที่ : " . $date .
+                "\n" . "เวลา : " . $time .
+                "\n" . "---------------";
+
+
+            function sendlinemesg()
+            {
+
+                // 0UqPMzzaUG11sH1oGi0QzJYOQlDwuoUxetv0G3VVDvT
+                define('LINE_API', "https://notify-api.line.me/api/notify");
+                define('LINE_TOKEN', "0UqPMzzaUG11sH1oGi0QzJYOQlDwuoUxetv0G3VVDvT");
+
+                function notify_message($message)
+                {
+                    $queryData = array('message' => $message);
+                    $queryData = http_build_query($queryData, '', '&');
+                    $headerOptions = array(
+                        'http' => array(
+                            'method' => 'POST',
+                            'header' => "Content-Type: application/x-www-form-urlencoded\r\n"
+                                . "Authorization: Bearer " . LINE_TOKEN . "\r\n"
+                                . "Content-Length: " . strlen($queryData) . "\r\n",
+                            'content' => $queryData
+                        )
+                    );
+                    $context = stream_context_create($headerOptions);
+                    $result = file_get_contents(LINE_API, FALSE, $context);
+                    $res = json_decode($result);
+                    return $res;
+                }
+            }
+
+            sendlinemesg();
+            $res = notify_message($message);
+
+
+
+            // End Notify
+```
 
